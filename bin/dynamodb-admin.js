@@ -6,12 +6,6 @@ const packageJson = require('../package.json')
 
 const { createServer } = require('../lib/backend')
 
-if (process.env.NODE_ENV === 'production') {
-  const clc = require('cli-color')
-  console.error(clc.red('Do not run this in production!'))
-  process.exit(1)
-}
-
 const parser = new ArgumentParser({
   description: packageJson.description,
   version: packageJson.version,
